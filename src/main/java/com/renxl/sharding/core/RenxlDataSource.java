@@ -1,5 +1,6 @@
 package com.renxl.sharding.core;
 
+import lombok.Data;
 import org.springframework.jdbc.datasource.AbstractDataSource;
 
 import javax.sql.DataSource;
@@ -11,6 +12,7 @@ import java.util.Map;
 /**
  * 多数剧源抽象类
  */
+@Data
 public abstract class RenxlDataSource extends AbstractDataSource {
 
     /**
@@ -20,7 +22,7 @@ public abstract class RenxlDataSource extends AbstractDataSource {
     /**
      * 多数据源别名列表 索引对应route结果 ,别名对应 #{dataSources}的String
      */
-    protected  List<String> indexMappingAlias;
+//    protected  List<String> indexMappingAlias;
 
 
 

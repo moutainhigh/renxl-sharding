@@ -1,6 +1,7 @@
 package com.renxl.sharding.aop;
 
 import com.renxl.sharding.annotation.RenxlRoute;
+import lombok.Data;
 import org.aopalliance.aop.Advice;
 import org.springframework.aop.Pointcut;
 import org.springframework.aop.support.AbstractPointcutAdvisor;
@@ -10,7 +11,7 @@ import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.core.Ordered;
 
 import java.util.List;
-
+@Data
 public class RenxlRouteAdvisor  extends AbstractPointcutAdvisor {
 
     private Advice advice;
@@ -37,7 +38,6 @@ public class RenxlRouteAdvisor  extends AbstractPointcutAdvisor {
      */
     public RenxlRouteAdvisor() {
         this.pointcut = buildPointcut();
-        this.advice = new RenxlRouteInterceptor();
     }
 
     /**

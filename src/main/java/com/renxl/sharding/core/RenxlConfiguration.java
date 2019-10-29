@@ -11,12 +11,15 @@ public class RenxlConfiguration {
     /**
      * 分表与下标的连接符
      */
-    String split_symbol;
+    String splitSymbol;
     /**
      * 数据库别名
      */
     List<String> alias;
-
+    /**
+     * 多数据源
+     */
+    RenxlDataSource renxlDataSource;
     /**
      * 每张逻辑表分成几个真实表
      */

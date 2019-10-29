@@ -9,6 +9,9 @@ import com.renxl.sharding.holder.DatasourceHolder;
 import com.renxl.sharding.holder.TableHolder;
 import com.renxl.sharding.util.AnnocationProxyUtil;
 import com.renxl.sharding.util.ClassTypeUtil;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
 
@@ -20,9 +23,11 @@ import java.util.*;
 
 public class RenxlRouteInterceptor implements MethodInterceptor {
     private String priority_level="order";
-
+    @Getter
+    @Setter
     private IRenxlRoute iRenxlRoute;
-
+    @Getter
+    @Setter
     private IRenxlHash iRenxlHash;
 
     /**
