@@ -70,7 +70,10 @@ public class SpringbootAutoConfiguration {
     }
 
 
-
+    /**
+     * TODO 通过yml解析器直接加载多个数据源
+     * @return
+     */
     @Bean
     @ConditionalOnMissingBean
     public RenxlMultipleDatasource getRenxlMultipleDatasource(){
