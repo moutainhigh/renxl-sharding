@@ -13,7 +13,7 @@ public class RenxlConfiguration {
      */
     String splitSymbol;
     /**
-     * 数据库别名
+     * 多数据源别名列表 索引对应route结果 ,别名对应 #{dataSources}的String
      */
     List<String> alias;
     /**
