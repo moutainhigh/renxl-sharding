@@ -17,6 +17,6 @@ import java.lang.annotation.Target;
 @Documented
 public @interface RenxlRouteId {
 
-
-    int order() default Ordered.HIGHEST_PRECEDENCE;
+    // tcc 优先
+    int order() default Ordered.HIGHEST_PRECEDENCE+1;
 }
