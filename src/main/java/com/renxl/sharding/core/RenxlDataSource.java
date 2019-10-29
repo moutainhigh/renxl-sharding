@@ -19,10 +19,6 @@ public abstract class RenxlDataSource extends AbstractDataSource {
      * 多数据源 别名和数据源集合
      */
     protected  Map<String,DataSource> dataSources;
-    /**
-     * 多数据源别名列表 索引对应route结果 ,别名对应 #{dataSources}的String
-     */
-//    protected  List<String> indexMappingAlias;
 
 
 
