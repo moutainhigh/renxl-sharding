@@ -32,7 +32,7 @@ public abstract class AbastractRenxlRoute implements IRenxlRoute {
 
         int shardtable  = routeTable(hashId);
         // 添加路由表集合到线程变量
-        List<String> realTables = getRealTables(shardtable, logictables, excludeTables, renxlConfiguration.split_symbol);
+        List<String> realTables = getRealTables(shardtable, logictables, excludeTables, renxlConfiguration.splitSymbol);
         // realTables大小为0则不进行分库分表
         TableHolder.push(realTables);
     }

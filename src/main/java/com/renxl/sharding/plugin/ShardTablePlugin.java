@@ -58,7 +58,7 @@ public class ShardTablePlugin implements Interceptor {
             // 自定义hash一致性分库分表位置: 通过hash一致算法路由之后的数据
             mSql =" " +  mSql + " ";
             for (String realTable : realTables) {
-                int i = realTable.lastIndexOf(renxlConfiguration.getSplit_symbol());
+                int i = realTable.lastIndexOf(renxlConfiguration.getSplitSymbol());
                 String logicTable = realTable.substring(0, i);
                 StringBuffer logicTableSb = new StringBuffer(" ").append(logicTable).append(" ");
                 StringBuffer realTableSb = new StringBuffer(" ").append(realTable).append(" ");
