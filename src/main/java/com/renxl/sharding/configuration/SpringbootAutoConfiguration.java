@@ -8,6 +8,7 @@ import com.renxl.sharding.route.DefaultHash;
 import com.renxl.sharding.route.DefaultRoute;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.autoconfigure.AutoConfigureBefore;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -76,16 +77,16 @@ public class SpringbootAutoConfiguration {
      */
     @Bean
     @ConditionalOnMissingBean
-    public RenxlMultipleDatasource getRenxlMultipleDatasource(){
+    public RenxlDataSource getRenxlMultipleDatasource(){
         log.info("==> 加载分库分表多数据源");
-        RenxlMultipleDatasource renxlMultipleDatasource = new RenxlMultipleDatasource();
+        RenxlDataSource renxlMultipleDatasource = new RenxlMultipleDatasource();
         return renxlMultipleDatasource;
     }
 
 
     @Bean
     @ConditionalOnMissingBean
-    public RenxlConfiguration getRenxlConfiguration(@Autowired RenxlDataSource renxlDataSource){
+    public RenxlConfiguration getRenxlConfiguration(@Autowired  RenxlDataSource renxlDataSource){
         log.info("==> 加载分库分表组件配置");
         RenxlConfiguration renxlMultipleDatasource = new RenxlConfiguration();
         renxlMultipleDatasource.setRenxlDataSource(renxlDataSource);
@@ -94,6 +95,8 @@ public class SpringbootAutoConfiguration {
         renxlMultipleDatasource.setTableSize(autoConfProperties.getTableSize());
         return renxlMultipleDatasource;
     }
+
+
 
 
 

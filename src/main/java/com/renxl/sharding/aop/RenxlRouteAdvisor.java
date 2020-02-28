@@ -7,10 +7,7 @@ import org.springframework.aop.Pointcut;
 import org.springframework.aop.support.AbstractPointcutAdvisor;
 import org.springframework.aop.support.ComposablePointcut;
 import org.springframework.aop.support.annotation.AnnotationMatchingPointcut;
-import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.core.Ordered;
-
-import java.util.List;
 @Data
 public class RenxlRouteAdvisor  extends AbstractPointcutAdvisor {
 

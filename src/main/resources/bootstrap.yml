@@ -1,0 +1,8 @@
+renxl:
+  multiple:
+    alias:
+      - primary
+      - second
+    tableSize: 2
+    splitSymbol: "_"
+
